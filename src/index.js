@@ -13,5 +13,5 @@ const  listTask = (req , res )=>{
 const server = http.createServer(listTask)
 
 server.listen(port, host ,()=>{
-    console.log(`el server esta corriendo en el ${host} con puerto ${port}`)
+    console.log(`el servidor esta corriendo en el ${host} con puerto ${port}`)
 })

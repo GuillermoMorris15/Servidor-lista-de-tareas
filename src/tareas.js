@@ -1,27 +1,27 @@
 exports.tareas = [
     {
         id:0,
-        dess: "caminar en el dia.",
+        descripcion: "caminar en el dia.",
         estado: false
     },
     {
         id:1,
-        dess: "trabajar",
+        descripcion: "ir a trabajar",
         estado: false
     },
     {
         id:2,
-        dess: "Ver peliculas",
+        descripcion: "Ver peliculas en la tarde",
         estado: false
     },
     {
         id:3,
-        dess: "salir con mi novia",
-        estado: false
+        descripcion: "salir con mi novia",
+        estado: true
     },
     {
         id:4,
-        dess: "ir al GYM",
+        descripcion: "ir al GYM",
         estado: false
     }
 ]
