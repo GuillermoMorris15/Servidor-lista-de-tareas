@@ -1,17 +1,20 @@
-const listado = require('./tareas')
-const http = require('http');
-const host = 'localhost'
-const port = 3000
+const express = require ("express")
+const app = express()
+const port = 3001
+const RouterList = require("./rutas/list-view-router")
+const RouterEdit = require("./rutas/list-edit-router")
+
+app.use(require("./rutas/list-view-router"))
+app.use(require("./rutas/list-edit-router"))
 
 
-const  listTask = (req , res )=>{
-    res.setHeader("Content-Type", "application/json")
-    res.writeHead(200)
-    res.end(JSON.stringify( listado.tareas))
-}
-
-const server = http.createServer(listTask)
-
-server.listen(port, host ,()=>{
-    console.log(`el server esta corriendo en el ${host} con puerto ${port}`)
+app.get("/", (req, res) => {
+    res.send("<b>Lista de tareas</b>")
 })
+
+
+app.listen(3001, () =>{
+    console.log(`servidor corriendo en el puerto: ${port}`);
+})
+
+module.exports = app
